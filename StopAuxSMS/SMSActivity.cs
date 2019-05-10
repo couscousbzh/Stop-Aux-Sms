@@ -20,17 +20,23 @@ namespace StopAuxSMS
             base.OnCreate(savedInstanceState);
 
             // Get the count value passed to us from MainActivity:
-            var count = Intent.Extras.GetInt(Const.SMSNUMBER_KEY, -1);
+            var stopnumber = Intent.Extras.GetInt(Const.SMSNUMBER_KEY, -1);
 
 
             // Display the count sent from the first activity:
             SetContentView(Resource.Layout.activity_sms);
+
             var txtView = FindViewById<TextView>(Resource.Id.text1);
-            txtView.Text = $"You clicked the button {count} times in the previous activity.";
+            txtView.Text = $"Appuyer sur le bouton suivant pour envoyer STOP au :  {stopnumber}";
+            
 
-
-
-
+            var sendSMSIntent = FindViewById<Button>(Resource.Id.sendSMSIntent);
+            sendSMSIntent.Click += (sender, e) => {
+                var smsUri = Android.Net.Uri.Parse($"smsto:{stopnumber}");
+                var smsIntent = new Intent(Intent.ActionSendto, smsUri);
+                smsIntent.PutExtra("sms_body", "STOP");
+                StartActivity(smsIntent);
+            };
         }
     }
 }

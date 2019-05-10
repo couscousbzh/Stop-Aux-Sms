@@ -30,12 +30,30 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main">
 
-        <TextView
-        android:id="@+id/text1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Hello World!" />
+		<LinearLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:orientation="vertical" >
+
+			<TextView
+				android:id="@+id/text1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18dp"
+				android:maxWidth="300dp"
+				android:gravity="center"
+				android:text="Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World!" />
+
+			<Button 
+				android:id="@+id/sendSMSIntent"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="25dp"
+				android:gravity="center"
+				android:text="Send !" />
+
+		</LinearLayout>
 
     </RelativeLayout>
     

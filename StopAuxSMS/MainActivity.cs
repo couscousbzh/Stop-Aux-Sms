@@ -15,9 +15,6 @@ namespace StopAuxSMS
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-       
-
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,6 +30,11 @@ namespace StopAuxSMS
                 Toast.MakeText(this, "Permission READ_SMS ok", ToastLength.Short).Show();            
             else       
                 ActivityCompat.RequestPermissions(this, new string[] { "android.permission.READ_SMS" }, Const.REQUEST_CODE_ASK_PERMISSIONS);
+
+            if (ContextCompat.CheckSelfPermission(BaseContext, "android.permission.RECEIVE_SMS") == Android.Content.PM.Permission.Granted)
+                Toast.MakeText(this, "Permission RECEIVE_SMS ok", ToastLength.Short).Show();
+            else
+                ActivityCompat.RequestPermissions(this, new string[] { "android.permission.RECEIVE_SMS" }, Const.REQUEST_CODE_ASK_PERMISSIONS);
 
             CreateNotificationChannel();
         }
