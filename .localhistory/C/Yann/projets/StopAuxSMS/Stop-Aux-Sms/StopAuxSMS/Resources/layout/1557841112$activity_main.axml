@@ -41,7 +41,7 @@
 					android:text="Lorsque vous recevrez un message commercial avec la mention 'stop' suivit d'un numéro, une notification vous sera envoyée et vous n'aurez plus qu'à cliquer sur celle ci. Voici un exemple :" />
 				<ImageView
 					android:layout_width="wrap_content"
-					android:layout_height="150dp"
+					android:layout_height="wrap_content"
 					android:layout_margin="15dp"
 					android:alpha=".85"
 					android:src="@drawable/notif"
@@ -54,7 +54,7 @@
 					android:padding="5dp"
 					android:background="#ccFFFFFF"
 					android:textSize="16sp"
-					android:text="Et c'est tout ! (Si vous désinstallez l'application alors ce service ne fonctionnera plus." />
+					android:text="Et c'est tout !" />
 
 			</LinearLayout>
 

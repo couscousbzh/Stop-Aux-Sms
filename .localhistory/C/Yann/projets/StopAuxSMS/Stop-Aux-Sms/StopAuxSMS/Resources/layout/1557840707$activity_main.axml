@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:src="@drawable/space"
+			android:scaleType = "centerCrop" />
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"			
+				android:layout_margin="15dp"
+				android:padding="5dp"
+				android:background="#ccFFFFFF"				
+				android:textSize="16sp" 
+				android:text="Félicitation ! Vous venez d'installer l'application et il n'y à plus rien à faire." />
+
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"			
+				android:layout_margin="15dp"
+				android:padding="5dp"
+				android:background="#ccFFFFFF"			
+				android:textSize="16sp" 
+				android:text="Lorsque vous recevrez un message commercial avec la mention 'stop' suivit d'un numéro, une notification vous sera envoyée et vous n'aurez plus qu'à cliquer sur celle ci. Voici un exemple :" />
+
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="15dp"
+				android:alpha=".85"
+				android:src="@drawable/notif"
+				android:scaleType="fitCenter" />
+
+			
+		
+
+
+		</LinearLayout>
+
+		
+
+	</FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

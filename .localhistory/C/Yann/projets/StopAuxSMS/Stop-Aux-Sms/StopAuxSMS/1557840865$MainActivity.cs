@@ -23,7 +23,8 @@ namespace StopAuxSMS
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-        
+            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            fab.Click += FabOnClick;
             
             if (ContextCompat.CheckSelfPermission(BaseContext, "android.permission.READ_SMS") == Android.Content.PM.Permission.Granted)            
                 Toast.MakeText(this, "Permission READ_SMS ok", ToastLength.Short).Show();            
